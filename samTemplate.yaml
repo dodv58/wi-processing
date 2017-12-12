@@ -13,4 +13,4 @@ Resources:
           Type: Api
           Properties:
             Path: /convolution
-            Method: GET
+            Method: POST
