@@ -9,8 +9,8 @@ Resources:
       Runtime: python2.7
       CodeUri: ./
       Events:
-        MyTimeApi:
+        HelloApi:
           Type: Api
           Properties:
-            Path: /TimeResource
+            Path: /HelloResource
             Method: GET
