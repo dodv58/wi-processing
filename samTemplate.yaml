@@ -2,15 +2,15 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Hello from aws lambda
 Resources:
-  HelloFunction:
+  convFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.hello
+      Handler: main.conv
       Runtime: python2.7
       CodeUri: ./
       Events:
-        HelloApi:
+        convApi:
           Type: Api
           Properties:
-            Path: /HelloResource
+            Path: /convolution
             Method: GET
