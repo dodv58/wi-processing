@@ -9,6 +9,5 @@ artifacts:
   type: zip
   files:
     - NewSamTemplate.yaml
-    - libs/**/*
     - main.py
     - configuration.json
