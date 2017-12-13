@@ -1,0 +1,4 @@
+{
+  "buildBucketName" : { "Fn::GetArtifactAtt" : ["MyAppBuild", "BucketName"]},
+  "buildObjectKey" : { "Fn::GetArtifactAtt" : ["MyAppBuild", "ObjectKey"]}
+}
