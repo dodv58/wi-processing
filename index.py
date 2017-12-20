@@ -10,7 +10,7 @@ def handler(event, context):
         {
             "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
             "Access-Control-Allow-Methods": "GET,OPTIONS",
-            "Access-Control-Allow-Origin": originURL
+            "Access-Control-Allow-Origin": "*"
         }
     }
 
