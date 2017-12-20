@@ -1,11 +1,16 @@
-version: 0.1
-phases:
-  install:
-    commands:
-      - pip install -r requirements.txt -t libs
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket wi-processing 
-                                   --output-template-file NewSamTemplate.yaml
-artifacts:
-  type: zip
-  files:
-    - NewSamTemplate.yaml
+version: 0.0
+environment_variables:
+    plaintext:
+        "INPUT_FILE": "saml.yaml"
+        "S3_BUCKET": ""
+containers:
+    LambdaFunctions:
+        phases:
+            during_build:
+                commands:
+                    - pip install -r requirements.txt
+                    - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
+        artifacts:
+            files:
+                - post-saml.yaml
+                - beta.json
